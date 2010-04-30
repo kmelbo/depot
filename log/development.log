@@ -1,0 +1,862 @@
+  [4;36;1mSQL (0.000091)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000050)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000051)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000243)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000180)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000684)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000756)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (0.000291)[0m   [0;1mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000049)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000104)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100428115924)
+  [4;36;1mSQL (0.007103)[0m   [0;1mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `image_url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000415)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100428115924')[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000175)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000697)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000822)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.000279)[0m   [0mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:00:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMjA4ZDM2OGEwNDYzYWVkOGMyNDFhZWUxMzdjNzM0
+MWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--4c31a1670e7e84c08de685e10dfdafdcd25e2ab0
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+
+CGI::Session::CookieStore::TamperedWithCookie (CGI::Session::CookieStore::TamperedWithCookie):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session/cookie_store.rb:144:in `unmarshal'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session/cookie_store.rb:101:in `restore'
+    /usr/lib/ruby/1.8/cgi/session.rb:304:in `[]'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/cgi_process.rb:136:in `session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/cgi_process.rb:168:in `stale_session_check!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/cgi_process.rb:116:in `session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1139:in `assign_shortcuts_without_flash'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/flash.rb:166:in `assign_shortcuts'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:523:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000112)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000050)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100428115924)
+  [4;36;1mSQL (0.000253)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000047)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000697)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000683)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.000270)[0m   [0mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:01:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8273bff1228fbdbb3f200a3320abf5a9aa87ef69
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000102)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mProduct Load (0.000479)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 0.15211 (6 reqs/sec) | Rendering: 0.11270 (74%) | DB: 0.00076 (0%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-04-28 14:02:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8273bff1228fbdbb3f200a3320abf5a9aa87ef69
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.000815)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.01708 (58 reqs/sec) | Rendering: 0.00721 (42%) | DB: 0.00081 (4%) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-04-28 14:02:29) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"", "title"=>"agile web development fourth edition", "description"=>"bok for versjon 4 av rails"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001505)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000161)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (0.000467)[0m   [0;1mINSERT INTO `products` (`image_url`, `updated_at`, `title`, `description`, `created_at`) VALUES('', '2010-04-28 12:02:29', 'agile web development fourth edition', 'bok for versjon 4 av rails', '2010-04-28 12:02:29')[0m
+  [4;35;1mSQL (0.005596)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 0.03224 (31 reqs/sec) | DB: 0.00773 (23%) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:02:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdG--abf44f47a7456143ca0c29b973f0a7ea78b74b0e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001439)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000472)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.02712 (36 reqs/sec) | Rendering: 0.00681 (25%) | DB: 0.00191 (7%) | 200 OK [http://localhost/products/1]
+  [4;36;1mSQL (0.000114)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000056)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000052)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100428115924)
+Migrating to AddPriceToProduct (20100428120408)
+  [4;36;1mSQL (0.017620)[0m   [0;1mALTER TABLE `products` ADD `price` decimal(8,2) DEFAULT 0[0m
+  [4;35;1mSQL (0.000450)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100428120408')[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000159)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000769)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000789)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.000296)[0m   [0mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:11:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdU--e5870b1082998c2df8b9466ed0a70ea160244852
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001596)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000541)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.02522 (39 reqs/sec) | Rendering: 0.00502 (19%) | DB: 0.00214 (8%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:17:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001562)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000151)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.03051 (32 reqs/sec) | Rendering: 0.01083 (35%) | DB: 0.00171 (5%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:17:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000522)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.001553)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.02958 (33 reqs/sec) | Rendering: 0.01077 (36%) | DB: 0.00208 (7%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:20:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.002988)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.001580)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.02930 (34 reqs/sec) | Rendering: 0.00742 (25%) | DB: 0.00457 (15%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:20:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000254)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.001686)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.02703 (36 reqs/sec) | Rendering: 0.00797 (29%) | DB: 0.00194 (7%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:21:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000182)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.001503)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.03962 (25 reqs/sec) | Rendering: 0.00749 (18%) | DB: 0.00169 (4%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:21:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000105)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.000652)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.01255 (79 reqs/sec) | Rendering: 0.00350 (27%) | DB: 0.00076 (6%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:21:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.000972)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000096)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.01465 (68 reqs/sec) | Rendering: 0.00366 (24%) | DB: 0.00107 (7%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-04-28 14:21:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.000888)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000084)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.01891 (52 reqs/sec) | Rendering: 0.00757 (40%) | DB: 0.00097 (5%) | 200 OK [http://localhost/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-04-28 14:21:47) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"", "title"=>"agile web development fourth edition", "price"=>"0.00", "description"=>"bok for versjon 4 av rails"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001540)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000139)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000236)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03175 (31 reqs/sec) | Rendering: 0.00684 (21%) | DB: 0.00207 (6%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-04-28 14:23:29) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"images/aglie.jpg", "title"=>"agile web development fourth edition", "price"=>"50.60", "description"=>"bok for versjon 4 av rails"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001615)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000139)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (0.009114)[0m   [0mUPDATE `products` SET `price` = '50.6', `updated_at` = '2010-04-28 12:23:29', `image_url` = 'images/aglie.jpg' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.002801)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 0.03931 (25 reqs/sec) | DB: 0.01382 (35%) | 302 Found [http://localhost/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:23:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl
+ZC4GOgpAdXNlZHsGOwdG--de379654361f9003fc4aaf3089be0279ec128ca2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001575)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000479)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.02506 (39 reqs/sec) | Rendering: 0.00500 (19%) | DB: 0.00205 (8%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:23:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl
+ZC4GOgpAdXNlZHsGOwdU--9a88955347b6479067c3ca92571b5aeaac85017e
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000260)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000758)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.01285 (77 reqs/sec) | Rendering: 0.00366 (28%) | DB: 0.00102 (7%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:23:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000117)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000911)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.01555 (64 reqs/sec) | Rendering: 0.00431 (27%) | DB: 0.00103 (6%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:23:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001534)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000141)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.02522 (39 reqs/sec) | Rendering: 0.00510 (20%) | DB: 0.00168 (6%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:23:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000131)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.001677)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.02700 (37 reqs/sec) | Rendering: 0.00760 (28%) | DB: 0.00181 (6%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 14:33:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000119)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000920)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.02663 (37 reqs/sec) | Rendering: 0.00359 (13%) | DB: 0.00104 (3%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-04-28 14:33:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001500)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000149)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.02879 (34 reqs/sec) | Rendering: 0.00947 (32%) | DB: 0.00165 (5%) | 200 OK [http://localhost/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-04-28 14:33:35) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"images/aglie.jpg", "title"=>"agile web development fourth edition", "price"=>"0", "description"=>"bok for versjon 4 av rails"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001556)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000140)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.000150)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03186 (31 reqs/sec) | Rendering: 0.00674 (21%) | DB: 0.00194 (6%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-04-28 14:33:45) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"images/aglie.jpg", "title"=>"agile web development fourth edition", "price"=>"1", "description"=>"bok for versjon 4 av rails"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001632)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000145)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.000158)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Update (0.000511)[0m   [0;1mUPDATE `products` SET `price` = '1.0', `updated_at` = '2010-04-28 12:33:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.003205)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 0.03203 (31 reqs/sec) | DB: 0.00565 (17%) | 302 Found [http://localhost/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 14:33:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl
+ZC4GOgpAdXNlZHsGOwdG--de379654361f9003fc4aaf3089be0279ec128ca2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001623)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000486)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.02542 (39 reqs/sec) | Rendering: 0.00508 (19%) | DB: 0.00211 (8%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:42:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl
+ZC4GOgpAdXNlZHsGOwdU--9a88955347b6479067c3ca92571b5aeaac85017e
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mSQL (0.000608)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.001407)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000480)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.001353)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+
+NoMethodError (undefined method `validate_uniqueness_of' for #<Class:0xb5d13020>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1672:in `method_missing'
+    /app/models/product.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:216:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:216:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:215:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:96:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:261:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:480:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:486:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:486:in `const_missing'
+    /app/controllers/products_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:42:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mSQL (0.000491)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.001382)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000672)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.001476)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+
+NoMethodError (undefined method `validate_uniqueness_of' for #<Class:0xb5fb6cf0>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1672:in `method_missing'
+    /app/models/product.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:216:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:216:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:215:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:96:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:261:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:480:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:486:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:486:in `const_missing'
+    /app/controllers/products_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:42:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mSQL (0.000493)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.001648)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000487)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.001309)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+
+NoMethodError (undefined method `validate_uniqueness_of' for #<Class:0xb5ed9ad0>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1672:in `method_missing'
+    /app/models/product.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:216:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:216:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:215:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:96:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:261:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:480:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:486:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:486:in `const_missing'
+    /app/controllers/products_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:42:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000318)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.000956)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.01358 (73 reqs/sec) | Rendering: 0.00406 (29%) | DB: 0.01308 (96%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:47:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000339)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.000929)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.01400 (71 reqs/sec) | Rendering: 0.00371 (26%) | DB: 0.00127 (9%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-04-28 15:47:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.000971)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000088)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.01717 (58 reqs/sec) | Rendering: 0.00562 (32%) | DB: 0.00106 (6%) | 200 OK [http://localhost/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-04-28 15:47:07) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"images/aglie.jpg", "title"=>"agile web development fourth edition", "price"=>"1.00", "description"=>"bok for versjon 4 av rails"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.000939)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.000090)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSELECT `title` FROM `products` WHERE (`products`.title = 'agile web development fourth edition' AND `products`.id <> 1) [0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 0.01801 (55 reqs/sec) | DB: 0.00160 (8%) | 302 Found [http://localhost/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 15:47:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl
+ZC4GOgpAdXNlZHsGOwdG--de379654361f9003fc4aaf3089be0279ec128ca2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.000922)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000088)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.01469 (68 reqs/sec) | Rendering: 0.00300 (20%) | DB: 0.00101 (6%) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:47:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl
+ZC4GOgpAdXNlZHsGOwdU--9a88955347b6479067c3ca92571b5aeaac85017e
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000124)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000763)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.01332 (75 reqs/sec) | Rendering: 0.00369 (27%) | DB: 0.00089 (6%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-04-28 15:48:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001541)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03339 (29 reqs/sec) | Rendering: 0.01261 (37%) | DB: 0.00154 (4%) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-04-28 15:49:38) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"images/aglie.jpg", "title"=>"Sykkelmekkeboken", "price"=>"500,01", "description"=>"Lær deg og mekke på sykkelen selv. Dette går nok bra.\r\nHar du ikke sykkel\r\nkan du kjøpe en"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001695)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mSELECT `title` FROM `products` WHERE (`products`.title = 'Sykkelmekkeboken') [0m
+  [4;35;1mSQL (0.000133)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03363 (29 reqs/sec) | Rendering: 0.00654 (19%) | DB: 0.00249 (7%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-04-28 15:49:48) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"images/aglie.jpg", "title"=>"Sykkelmekkeboken", "price"=>"500.01", "description"=>"Lær deg og mekke på sykkelen selv. Dette går nok bra.\r\nHar du ikke sykkel\r\nkan du kjøpe en"}, "authenticity_token"=>"1e32de6dba0120ec7355c2748d8111596190569c", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.001628)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000157)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000392)[0m   [0;1mSELECT `title` FROM `products` WHERE (`products`.title = 'Sykkelmekkeboken') [0m
+  [4;35;1mProduct Create (0.000491)[0m   [0mINSERT INTO `products` (`image_url`, `updated_at`, `title`, `price`, `description`, `created_at`) VALUES('images/aglie.jpg', '2010-04-28 13:49:48', 'Sykkelmekkeboken', '500.01', 'Lær deg og mekke på sykkelen selv. Dette går nok bra.\r\nHar du ikke sykkel\r\nkan du kjøpe en', '2010-04-28 13:49:48')[0m
+  [4;36;1mSQL (0.024741)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed in 0.05869 (17 reqs/sec) | DB: 0.02741 (46%) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-04-28 15:49:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdG--abf44f47a7456143ca0c29b973f0a7ea78b74b0e
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.001597)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.000566)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.16785 (5 reqs/sec) | Rendering: 0.00531 (3%) | DB: 0.00216 (1%) | 200 OK [http://localhost/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:49:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdU--e5870b1082998c2df8b9466ed0a70ea160244852
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000274)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000773)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.01401 (71 reqs/sec) | Rendering: 0.00406 (28%) | DB: 0.00105 (7%) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.000111)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000052)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100428115924)
+Migrating to AddPriceToProduct (20100428120408)
+Migrating to AddTestData (20100428135026)
+  [4;36;1mProduct Delete all (0.006778)[0m   [0;1mDELETE FROM `products` [0m
+  [4;35;1mProduct Columns (0.000731)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000236)[0m   [0mSELECT `title` FROM `products` WHERE (`products`.title = 'Pragmatic Version Control') [0m
+  [4;36;1mProduct Create (0.000267)[0m   [0;1mINSERT INTO `products` (`image_url`, `updated_at`, `title`, `price`, `description`, `created_at`) VALUES('/images/agile.jpg', '2010-04-28 13:55:19', 'Pragmatic Version Control', '28.5', '<p>\n This book is a recipe-based approach to using Subversion that will\n get you up and running quickly---and correctly. All projects need\n version control: it\'s a foundational piece of any project\' s\n infrastructure. Yet half of all project teams in the U.S. don\'t use\n any version control at all. Many others don\'t use it well, and end\n up experiencing time-consuming problems.\n </p>', '2010-04-28 13:55:19')[0m
+  [4;35;1mSQL (0.000320)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000050)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSELECT `title` FROM `products` WHERE (`products`.title = 'Sykkelmekkeboken') [0m
+  [4;36;1mProduct Create (0.000229)[0m   [0;1mINSERT INTO `products` (`image_url`, `updated_at`, `title`, `price`, `description`, `created_at`) VALUES('/images/agile.jpg', '2010-04-28 13:55:19', 'Sykkelmekkeboken', '22.3', '<p>\n Lær deg og mekke sykkelen selv\n </p>', '2010-04-28 13:55:19')[0m
+  [4;35;1mSQL (0.000279)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000493)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100428135026')[0m
+  [4;35;1mSQL (0.000302)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000674)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000853)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-28 15:55:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000514)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.001744)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.02899 (34 reqs/sec) | Rendering: 0.00859 (29%) | DB: 0.00226 (7%) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.000069)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000053)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-29 08:10:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000086)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000844)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.02833 (35 reqs/sec) | Rendering: 0.00496 (17%) | DB: 0.00105 (3%) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.000075)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000058)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-30 07:44:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000139)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.000873)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.01376 (72 reqs/sec) | Rendering: 0.00414 (30%) | DB: 0.00114 (8%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-04-30 10:55:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjc2NTVmY2E4ODc0Yjc1NjlkYjMxN2ZiMGE3N2Q4
+MzgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--707a6d4393ee065ba0a8c1cfe43b0823172e7d64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mSQL (0.000113)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mProduct Load (0.000316)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.000916)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.03562 (28 reqs/sec) | Rendering: 0.01364 (38%) | DB: 0.00141 (3%) | 200 OK [http://localhost/products]
